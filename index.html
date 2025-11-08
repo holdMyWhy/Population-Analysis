@@ -242,6 +242,125 @@
             border-radius: 5px;
             border-left: 3px solid #667eea;
         }
+
+        /* Comparison Table Styles */
+        .comparison-subtitle {
+            text-align: center;
+            color: #4a5568;
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .comparison-subtitle strong {
+            color: #2d3748;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-top: 20px;
+        }
+
+        .comparison-table thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .comparison-table th {
+            padding: 18px 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .comparison-table th:first-child {
+            border-top-left-radius: 12px;
+        }
+
+        .comparison-table th:last-child {
+            border-top-right-radius: 12px;
+        }
+
+        .comparison-table tbody tr {
+            transition: all 0.3s ease;
+        }
+
+        .comparison-table tbody tr:hover {
+            background-color: #f7fafc;
+            transform: scale(1.01);
+        }
+
+        .comparison-table td {
+            padding: 20px 15px;
+            border-bottom: 1px solid #e2e8f0;
+            color: #2d3748;
+            font-size: 0.95rem;
+        }
+
+        .comparison-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tbody tr:last-child td:first-child {
+            border-bottom-left-radius: 12px;
+        }
+
+        .comparison-table tbody tr:last-child td:last-child {
+            border-bottom-right-radius: 12px;
+        }
+
+        .comparison-table .city-name {
+            font-weight: 600;
+            color: #5a67d8;
+            font-size: 1.05rem;
+        }
+
+        .comparison-table .positive {
+            color: #38a169;
+            font-weight: 600;
+        }
+
+        .comparison-table .growth-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .comparison-table .high-growth {
+            background-color: #c6f6d5;
+            color: #22543d;
+        }
+
+        .comparison-table .medium-growth {
+            background-color: #bee3f8;
+            color: #2c5282;
+        }
+
+        .comparison-table .low-growth {
+            background-color: #fed7d7;
+            color: #742a2a;
+        }
+
+        .comparison-footnote {
+            margin-top: 25px;
+            padding: 15px;
+            background-color: #edf2f7;
+            border-left: 4px solid #667eea;
+            border-radius: 8px;
+            color: #4a5568;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .comparison-table .number {
+            font-variant-numeric: tabular-nums;
+        }
         
         @media (max-width: 768px) {
             .container {
@@ -258,6 +377,13 @@
             }
             .demo-chart-container {
                 height: 300px;
+            }
+            .comparison-table {
+                font-size: 0.85rem;
+            }
+            .comparison-table th,
+            .comparison-table td {
+                padding: 12px 8px;
             }
         }
     </style>
@@ -346,6 +472,158 @@
                     </tbody>
                 </table>
                 <p style="font-size: 0.85em; color: #7f8c8d; margin-top: 10px;">Source: Dubai Statistics Center (September data for each year)</p>
+            </div>
+        </div>
+
+        <!-- Global Cities Comparison -->
+        <div class="container">
+            <h2>5-Year Population Growth</h2>
+            <p class="subtitle">≈2019 → 2024</p>
+            <div class="comparison-subtitle"><strong>Prepared by:</strong> Virender Singh | +971 58 587 7330</div>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>City</th>
+                        <th>Year - 2019</th>
+                        <th>Year - 2024</th>
+                        <th>Absolute Change</th>
+                        <th>5-Year Growth</th>
+                        <th>CAGR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="city-name">Dubai (Emirate)</td>
+                        <td class="number">3,355,100</td>
+                        <td class="number">3,825,000</td>
+                        <td class="number positive">+469,900</td>
+                        <td><span class="growth-badge high-growth">+14.0%</span></td>
+                        <td class="number positive">+2.66%/yr</td>
+                    </tr>
+                    <tr>
+                        <td class="city-name">New York City</td>
+                        <td class="number">8,336,817</td>
+                        <td class="number">8,478,000</td>
+                        <td class="number positive">+141,183</td>
+                        <td><span class="growth-badge medium-growth">+1.69%</span></td>
+                        <td class="number positive">+0.34%/yr</td>
+                    </tr>
+                    <tr>
+                        <td class="city-name">Singapore</td>
+                        <td class="number">5,703,600</td>
+                        <td class="number">6,016,900</td>
+                        <td class="number positive">+313,300</td>
+                        <td><span class="growth-badge medium-growth">+5.84%</span></td>
+                        <td class="number positive">+1.14%/yr</td>
+                    </tr>
+                    <tr>
+                        <td class="city-name">London</td>
+                        <td class="number">8,961,989</td>
+                        <td class="number">9,089,736</td>
+                        <td class="number positive">+127,747</td>
+                        <td><span class="growth-badge medium-growth">+1.43%</span></td>
+                        <td class="number positive">+0.28%/yr</td>
+                    </tr>
+                    <tr>
+                        <td class="city-name">Sydney*</td>
+                        <td class="number">5,367,206</td>
+                        <td class="number">5,557,233</td>
+                        <td class="number positive">+190,027</td>
+                        <td><span class="growth-badge medium-growth">+3.54%</span></td>
+                        <td class="number positive">+0.697%/yr</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="comparison-footnote">
+                <strong>*</strong> Sydney uses 2020→2024 due to official data cycle alignment.
+            </div>
+        </div>
+
+        <!-- Millionaire Migration 2025 -->
+        <div class="container">
+            <h2>Millionaire Migration in 2025</h2>
+            <p class="subtitle">Net Inflow of High-Net-Worth Individuals by Country</p>
+            
+            <div class="chart-container" style="height: 600px;">
+                <canvas id="millionaireChart"></canvas>
+            </div>
+            
+            <div style="background: #e8f5e9; border-left: 4px solid #4caf50; padding: 20px; border-radius: 10px; margin-top: 30px;">
+                <h3 style="color: #2c3e50; font-size: 1.2em; margin-bottom: 15px;">
+                    <span style="font-size: 1.3em;">🏆</span> Why UAE Leads the World
+                </h3>
+                <p style="color: #4a5568; font-size: 1.05em; line-height: 1.8;">
+                    The <strong style="color: #667eea;">UAE is attracting 9,800 millionaires</strong> in 2025, making it the #1 destination globally for high-net-worth individuals. This is driven by its <strong>zero personal income tax</strong>, golden visa residency programs, world-class infrastructure, strategic location, political stability, and luxury lifestyle offerings.
+                </p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;">
+                    <div style="background: white; padding: 15px; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 2em; margin-bottom: 5px;">🏅</div>
+                        <div style="font-weight: 600; color: #2c3e50;">9,800</div>
+                        <div style="font-size: 0.9em; color: #7f8c8d;">Millionaires to UAE</div>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 2em; margin-bottom: 5px;">💰</div>
+                        <div style="font-weight: 600; color: #2c3e50;">0%</div>
+                        <div style="font-size: 0.9em; color: #7f8c8d;">Personal Income Tax</div>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 2em; margin-bottom: 5px;">✈️</div>
+                        <div style="font-weight: 600; color: #2c3e50;">Golden Visa</div>
+                        <div style="font-size: 0.9em; color: #7f8c8d;">Long-term Residency</div>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 2em; margin-bottom: 5px;">🌟</div>
+                        <div style="font-weight: 600; color: #2c3e50;">Luxury</div>
+                        <div style="font-size: 0.9em; color: #7f8c8d;">High-end Lifestyle</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="overflow-x: auto; margin-top: 30px;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.95em;">
+                    <thead>
+                        <tr style="background: linear-gradient(135deg, #667eea, #764ba2); color: white;">
+                            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Rank</th>
+                            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Country</th>
+                            <th style="padding: 12px; text-align: center; border: 1px solid #ddd;">Net Inflow</th>
+                            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Key Attractions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #f0f9ff;">
+                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: 600;">1</td>
+                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: 600;">🇦🇪 UAE</td>
+                            <td style="padding: 10px; text-align: center; border: 1px solid #ddd; font-weight: 700; color: #4caf50; font-size: 1.1em;">9,800</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Zero tax, Golden Visa, luxury lifestyle</td>
+                        </tr>
+                        <tr style="background: #f9f9f9;">
+                            <td style="padding: 10px; border: 1px solid #ddd;">2</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">🇺🇸 United States</td>
+                            <td style="padding: 10px; text-align: center; border: 1px solid #ddd; font-weight: 600; color: #27ae60;">7,500</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Economic opportunity, innovation hub</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ddd;">3</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">🇮🇹 Italy</td>
+                            <td style="padding: 10px; text-align: center; border: 1px solid #ddd; font-weight: 600; color: #27ae60;">3,600</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Culture, lifestyle, favorable tax regime</td>
+                        </tr>
+                        <tr style="background: #f9f9f9;">
+                            <td style="padding: 10px; border: 1px solid #ddd;">4</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">🇨🇭 Switzerland</td>
+                            <td style="padding: 10px; text-align: center; border: 1px solid #ddd; font-weight: 600;">3,000</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Banking, stability, quality of life</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ddd;">5</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">🇸🇦 Saudi Arabia</td>
+                            <td style="padding: 10px; text-align: center; border: 1px solid #ddd; font-weight: 600;">2,400</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Vision 2030, mega projects</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
 
@@ -1204,6 +1482,102 @@
                 }]
             },
             options: educationChartOptions
+        });
+
+        // Millionaire Migration Chart
+        const millionaireCtx = document.getElementById('millionaireChart').getContext('2d');
+        new Chart(millionaireCtx, {
+            type: 'bar',
+            data: {
+                labels: [
+                    'UAE 🇦🇪', 'United States 🇺🇸', 'Italy 🇮🇹', 'Switzerland 🇨🇭', 
+                    'Saudi Arabia 🇸🇦', 'Singapore 🇸🇬', 'Portugal 🇵🇹', 'Greece 🇬🇷',
+                    'Canada 🇨🇦', 'Australia 🇦🇺', 'Hong Kong 🇭🇰', 'Japan 🇯🇵',
+                    'Malta 🇲🇹', 'Thailand 🇹🇭', 'Costa Rica 🇨🇷', 'Panama 🇵🇦',
+                    'Cyprus 🇨🇾', 'Monaco 🇲🇨', 'Cayman Islands 🇰🇾', 'New Zealand 🇳🇿'
+                ],
+                datasets: [{
+                    label: 'Net Inflow of Millionaires',
+                    data: [9800, 7500, 3600, 3000, 2400, 1600, 1400, 1200, 1000, 1000, 
+                           800, 600, 500, 450, 400, 350, 250, 200, 200, 150],
+                    backgroundColor: function(context) {
+                        const index = context.dataIndex;
+                        if (index === 0) return 'rgba(76, 175, 80, 0.8)'; // UAE - green
+                        if (index <= 4) return 'rgba(102, 126, 234, 0.8)'; // Top 5 - purple
+                        return 'rgba(158, 158, 158, 0.6)'; // Others - gray
+                    },
+                    borderColor: function(context) {
+                        const index = context.dataIndex;
+                        if (index === 0) return 'rgba(76, 175, 80, 1)';
+                        if (index <= 4) return 'rgba(102, 126, 234, 1)';
+                        return 'rgba(158, 158, 158, 0.8)';
+                    },
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: false
+                    },
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(0,0,0,0.8)',
+                        padding: 12,
+                        titleFont: {
+                            size: 14,
+                            weight: 'bold'
+                        },
+                        bodyFont: {
+                            size: 13
+                        },
+                        callbacks: {
+                            label: function(context) {
+                                return 'Net Inflow: ' + context.parsed.x.toLocaleString() + ' millionaires';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Number of Millionaires (Net Inflow)',
+                            font: {
+                                size: 13,
+                                weight: 'bold'
+                            }
+                        },
+                        ticks: {
+                            callback: function(value) {
+                                if (value >= 1000) {
+                                    return (value / 1000).toFixed(1) + 'K';
+                                }
+                                return value;
+                            }
+                        },
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.05)'
+                        }
+                    },
+                    y: {
+                        ticks: {
+                            font: {
+                                size: 11
+                            }
+                        },
+                        grid: {
+                            display: false
+                        }
+                    }
+                }
+            }
         });
     </script>
 </body>
